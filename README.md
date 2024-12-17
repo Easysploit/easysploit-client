@@ -1,6 +1,6 @@
 # easysploit-client
 ## Overview
-Easysploit Client is a simple tool for generating and customizing payloads by requesting their creation from the Easysploit Server. It provides a way to directly execute the generated payloads and supports additional customizations such as admin privilege escalation `-a` and threading `-t`.
+Easysploit Client is a simple tool that generates code to request payload creation from the Easysploit Server. It enables users to customize payload generation with options like admin privilege escalation `-a` and threading `-t`. The generated code can be used to execute the payload directly.
 
 ## Features
 - Admin Request (-a): Generate requesting code to server with admin privilege escalation.
