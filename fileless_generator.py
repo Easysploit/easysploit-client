@@ -14,6 +14,7 @@ Arguments:
 <PORT>: Port number to listen on.
 -a or --admin: Include admin feature code.
 -t or --threading: Include threading code.
+-e or --encoding: Include base64 encoding.
 -h or --help: Show this help message.
 """
 parser = argparse.ArgumentParser(description='Generate a fileless payload.', epilog=HELP_MESSAGE, formatter_class=argparse.RawDescriptionHelpFormatter)
