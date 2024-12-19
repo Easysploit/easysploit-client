@@ -15,8 +15,8 @@ This script generates a fileless payload that can be used to execute a meterpret
 The generated code should be pasted in the target python code.
 
 Usage:
-python3 fileless_generator.py <IP> <PORT> [-a] [-t] [-e] [-o <OUTPUT FILE>]
-python3 fileless_generator.py <IP> <PORT> [--admin] [--threading] [--encoding] [--output <OUTPUT FILE>]
+python3 easysploit.py <IP> <PORT> [-a] [-t] [-e] [-o <OUTPUT FILE>]
+python3 easysploit.py <IP> <PORT> [--admin] [--threading] [--encoding] [--output <OUTPUT FILE>]
 """
 
 """

