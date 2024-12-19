@@ -26,8 +26,8 @@ Arguments:
 -a or --admin: Include admin feature code.
 -t or --threading: Include threading code.
 -e or --encoding: Include base64 encoding.
--o or --output: Output file to save the code.
 -f or --file: Input file with IP and PORT pairs.
+-o or --output: Output file to save the code.
 -h or --help: Show this help message.
 """
 
@@ -37,9 +37,9 @@ parser.add_argument('port', type=int, nargs='?', help='Port number')
 parser.add_argument('-a', '--admin', action='store_true', help='Include admin path')
 parser.add_argument('-t', '--threading', action='store_true', help='Include threading')
 parser.add_argument('-e', '--encoding', action='store_true', help='Include base64 encoding')
+parser.add_argument('-f', '--file', type=str, help='Input file with IP and PORT pairs')
 parser.add_argument('-o', '--output', type=str, help='Output file to save the code')
 parser.add_argument('-h', '--help', action='help', help='Show this help message')
-parser.add_argument('-f', '--file', type=str, help='Input file with IP and PORT pairs')
 
 args = parser.parse_args()
 
