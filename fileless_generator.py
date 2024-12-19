@@ -1,6 +1,5 @@
 import argparse
 import base64
-import zlib
 
 HELP_MESSAGE = """
 
