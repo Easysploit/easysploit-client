@@ -44,12 +44,16 @@ def connect_to_server():
                     
     except KeyboardInterrupt:
         print("Program terminated by the user.")
+    except ConnectionRefusedError:
+        print("Connection refused. Please check the server.")
     except Exception as e:
         print(f"Error occurred: {e}")
     finally:
-        subprocess.run(["screen", "-S", screen_name, "-X", "quit"], check=True)
-        client_socket.close()
-        print("Connection closed.")
+        try:
+            subprocess.run(["screen", "-S", screen_name, "-X", "quit"], check=True)
+            client_socket.close()
+        except:
+            pass
 
 if __name__ == '__main__':
     connect_to_server()
