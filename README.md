@@ -1,4 +1,4 @@
-# easysploit-client
+# Easysploit
 ## Overview
 Easysploit Client is a simple tool that generates code to request payload creation from the Easysploit Server. It enables users to customize payload generation with options like admin privilege escalation `-a` and threading `-t`.The generated code can be used to execute the payload directly.
 
@@ -31,6 +31,22 @@ python3 easysploit.py <Attacker-IP> <Port> [-a] [-t] [-e] [-o <output-file>] [-h
 ## Example
 ```
 python3 easysploit.py 192.168.0.1 4444 -a -t -e -o payload.py
+```
+
+# Autosploit
+
+## Overview
+This project is built to automate reverse TCP session creation, streamlining exploit workflows while avoiding antivirus detection. By utilizing a central server, it generates custom, fileless payloads and ensures connected attackers can execute them seamlessly, setting up TCP sessions automatically in real-time without leaving traces.
+**You don't have to create msfconsole listener session manually, just run the server and client, and you are good to go.**
+
+## Features
+- Central Server: Manage and control multiple attackers with a central server.
+- Real-Time: Automatically set up reverse TCP sessions when payload creation is requested from target machines.
+- Automatic TCP Sessions: Automatically set up reverse TCP sessions for connected attackers.
+
+## Usage
+```
+python3 autosploit.py
 ```
 
 ## License
