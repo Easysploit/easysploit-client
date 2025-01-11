@@ -1,4 +1,3 @@
-import os
 import platform
 import subprocess
 from linux import connect_to_server
@@ -10,9 +9,14 @@ class UnsupportedOSError(Exception):
     pass
 
 def check_environment():
-    if platform.system() != 'Linux':
-        raise UnsupportedOSError("This script can only be run on Linux systems.")
+    allowed_os = ['Linux']
+    if platform.system() not in allowed_os:
+        raise UnsupportedOSError("This script can only be run on allowed operating systems.\nAllowed operating systems: " + ', '.join(allowed_os))
+    if platform.system() == 'Linux':
+        check_linux()
     
+
+def check_linux():
     required_commands = ["screen", "msfconsole"]
     for command in required_commands:
         if subprocess.run(["which", command], capture_output=True, text=True).returncode != 0:
