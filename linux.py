@@ -90,7 +90,7 @@ You are now connected to the server.
 If any target requests a payload with your IP, then server will make you a msfconsole listener session.
 Just stay connected to the server and wait for the target execute the exploit code.
               
-Waiting for the commands from the server...
+Waiting for the signals from the server...
 """)
         while True:
             data = client_socket.recv(1024)
