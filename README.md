@@ -1,4 +1,5 @@
 # Easysploit
+
 ## Overview
 Easysploit Client is a simple tool that generates code to request payload creation from the Easysploit Server. It enables users to customize payload generation with options like admin privilege escalation `-a` and threading `-t`.The generated code can be used to execute the payload directly.
 
@@ -51,3 +52,8 @@ python3 autosploit.py
 
 ## License
 This project is licensed under the MIT License.
+
+## Terms of Use
+This tool is provided for **legal pentesting tests** and should only be used in **authorized environments**.  
+Any illegal activity performed using this tool is the **sole responsibility of the user**.  
+By using this tool, you agree to these terms and accept full legal responsibility for its use.
